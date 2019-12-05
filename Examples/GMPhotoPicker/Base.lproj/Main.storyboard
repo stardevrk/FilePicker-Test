@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xik-1Q-ysg">
+                                <rect key="frame" x="20" y="550" width="110" height="30"/>
+                                <state key="normal" title="GMImagePicker">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchGMImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMR-Xa-6wM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h1v-NB-0Gh">
+                                <rect key="frame" x="479" y="550" width="101" height="30"/>
+                                <state key="normal" title="UIImagePicker">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="launchUIImagePicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oL1-Xp-hCt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xik-1Q-ysg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LBS-nQ-mgK"/>
+                            <constraint firstAttribute="trailing" secondItem="h1v-NB-0Gh" secondAttribute="trailing" constant="20" id="Vjj-hf-b1t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h1v-NB-0Gh" secondAttribute="bottom" constant="20" id="ieW-bb-P1o"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xik-1Q-ysg" secondAttribute="bottom" constant="20" id="s88-gU-OMQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gmImagePickerButton" destination="Xik-1Q-ysg" id="KYK-ai-Gkw"/>
+                        <outlet property="uiImagePickerButton" destination="h1v-NB-0Gh" id="ugB-dp-QQa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="29"/>
+        </scene>
+    </scenes>
+</document>
