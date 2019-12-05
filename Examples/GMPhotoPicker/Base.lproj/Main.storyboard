@@ -21,7 +21,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xik-1Q-ysg">
                                 <rect key="frame" x="20" y="550" width="110" height="30"/>
-                                <state key="normal" title="GMImagePicker">
+                                <state key="normal" title="MyTestFilePicker">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
