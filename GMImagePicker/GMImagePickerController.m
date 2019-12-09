@@ -26,7 +26,7 @@
         _displaySelectionInfoToolbar = YES;
         _displayAlbumsNumberOfAssets = YES;
         _autoDisableDoneButton = YES;
-        _allowsMultipleSelection = YES;
+        _allowsMultipleSelection = NO;
         _confirmSingleSelection = NO;
         _showCameraButton = NO;
         
@@ -47,8 +47,7 @@
         //_customSmartCollections=nil;
         
         // Which media types will display
-        _mediaTypes = @[@(PHAssetMediaTypeAudio),
-                        @(PHAssetMediaTypeVideo),
+        _mediaTypes = @[@(PHAssetMediaTypeVideo),
                         @(PHAssetMediaTypeImage)];
         
         self.preferredContentSize = kPopoverContentSize;

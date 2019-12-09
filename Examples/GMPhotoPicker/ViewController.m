@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "GMImagePickerController.h"
 
+#import <MobileCoreServices/MobileCoreServices.h>
+
 @import UIKit;
 @import Photos;
 
@@ -108,9 +110,16 @@
 
 - (IBAction)launchUIImagePicker:(id)sender
 {
+//    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     picker.delegate = self;
+    [picker setMediaTypes:@[(NSString *)kUTTypeMovie]];
+    if (@available(iOS 11.0, *)) {
+        picker.videoExportPreset = AVAssetExportPresetPassthrough;
+    } else {
+        // Fallback on earlier versions
+    }
     picker.modalPresentationStyle = UIModalPresentationPopover;
     
     UIPopoverPresentationController *popPC = picker.popoverPresentationController;
@@ -139,7 +148,6 @@
 }
 
 #pragma mark - GMImagePickerControllerDelegate
-
 - (void)assetsPickerController:(GMImagePickerController *)picker didFinishPickingAssets:(NSArray *)assetArray
 {
     [picker.presentingViewController dismissViewControllerAnimated:YES completion:nil];
